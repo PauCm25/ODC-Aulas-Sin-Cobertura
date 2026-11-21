@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aulas sin cobertura · Rural Connect</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <div class="screenhead">
+    <div class="num" id="num">01</div>
+    <div class="titles">
+      <div class="kicker" id="kicker"></div>
+      <h1 id="title"></h1>
+    </div>
+    <nav class="phases" id="phases" aria-label="Fases de la ruta"></nav>
+  </div>
+
+  <div class="device">
+    <div class="screen" id="screen">
+      <div class="sbar">
+        <div class="brand"><span class="dot"></span><span>Rural Connect</span></div>
+        <div class="navbtns">
+          <button id="prev" aria-label="Anterior">←</button>
+          <button id="mapBtn">MAPA</button>
+          <button id="next" aria-label="Siguiente">→</button>
+        </div>
+      </div>
+      <section class="stage" id="stage" tabindex="-1" aria-live="polite"></section>
+
+      <div class="nodo-dock">
+      <!-- Nodo: avatar animado que habla -->
+        <div class="bubble" id="bubble" role="region" aria-label="Nodo dice">
+          <div class="bhead"><b>Nodo</b>
+            <button class="bbtn" id="btnPlay" aria-label="Escuchar">▶</button>
+            <button class="bbtn" id="btnMute" aria-label="Silenciar voz automática">🔊</button>
+            <button class="bbtn" id="btnHide" aria-label="Ocultar">✕</button>
+          </div>
+          <p class="btext" id="btext"></p>
+        </div>
+        <button class="nodo-btn" id="nodoBtn" aria-label="Nodo: escuchar o ver lo que dice"><span id="nodoSvg"></span></button>
+      </div>
+    </div>
+  </div>
+  <div class="device-base"></div>
+  <div class="foot">Aulas sin cobertura · Universidad de Cundinamarca · 2026 · CC BY-SA 4.0</div>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="box"><button class="close" id="modalClose" aria-label="Cerrar">✕</button><div id="modalBody"></div></div></div>
+<div class="toast" id="toast" role="status"></div>
+<audio id="voiceAudio" preload="none"></audio>
+
+<script src="js/scorm.js"></script>
+<script src="js/voces.js"></script>
+<script src="js/ilustraciones.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
